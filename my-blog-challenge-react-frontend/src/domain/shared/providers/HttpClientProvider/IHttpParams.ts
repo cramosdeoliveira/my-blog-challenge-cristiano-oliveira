@@ -1,0 +1,1 @@
+export type IHttpParams = Record<string, number | string | boolean>;

@@ -1,0 +1,30 @@
+// ------------------------------
+// @font-face Generator
+// ------------------------------
+
+@mixin createFont ($family, $style, $weight, $path, $file) {
+	@font-face {
+		font-family: $family;
+		src:
+		url('#{$path}#{$file}.eot'),
+		url('#{$path}#{$file}.eot?#iefix') format('embedded-opentype'),
+		url('#{$path}#{$file}.svg') format('svg'),
+		url('#{$path}#{$file}.ttf') format('truetype'),
+		url('#{$path}#{$file}.woff2') format('woff2'),
+		url('#{$path}#{$file}.woff') format('woff'),
+		;
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+// Din
+$din-path: "/assets/fonts/roboto/";
+
+@include createFont(roboto, normal, 100, $din-path, roboto-regular);
+@include createFont(roboto, italic, 100, $din-path, roboto-regular-italic);
+
+@include createFont(roboto, normal, bold, $din-path, roboto-bold);
+@include createFont(roboto, italic, bold, $din-path, roboto-bold-italic);
+
+

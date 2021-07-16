@@ -1,0 +1,196 @@
+section.posts {
+	
+	.background {
+		opacity: 0.1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 150px;
+		background-image: url('/assets/img/img-2.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	ul.posts-list {
+		position: relative;
+
+		li {
+			margin: 0 0 20px 0;
+
+			> header {
+				display: flex;
+				width: 100%;
+				margin: 0 0 20px 0;
+
+				.user {
+					display: flex;
+					flex-grow: 1;
+					height: auto;
+		
+					figure.user {
+						flex-shrink: 0;
+						overflow: hidden;
+						width: 60px;
+						height: 80px;
+						margin: 0 10px 0 0;
+						border-radius: 5px 5px 0 0;
+			
+						img {
+							width: inherit;
+							height: inherit;
+						}
+					}
+		
+					> .content {
+						display: flex;
+						flex-wrap: wrap;
+						align-content: flex-end;
+						width: 100%;
+		
+						.name {
+							width: 100%;
+							margin: 0 0 5px 0;
+							font-size: 1.4rem;
+							font-style: italic;
+							font-weight: bold;
+							text-transform: uppercase;
+							color: $black;
+						}
+
+						.data {
+							width: 100%;
+							font-style: italic;
+							font-weight: bold;
+							font-size: 1.2rem;
+							color: $gray-3;
+						}
+					}
+				}
+
+				.actions {
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-end;
+					justify-content: flex-end;
+					flex-shrink: 0;
+					width: 30%;
+					margin: 0 0 0 20px;
+
+					.icon:last-child {
+						margin: 0 0 0 10px;
+					}
+				}
+			}
+
+			h1 {
+				width: 100%;
+				margin: 0 0 10px 0;
+				font-size: 1.8rem;
+				font-style: italic;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $black;
+			}
+
+			> .content {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+
+				figure {
+					flex-shrink: 0;
+					overflow: hidden;
+					width: 100%;
+					margin: 0 0 20px 0;
+		
+					img {
+						width: 100%;
+					}
+				}
+
+				p {
+					width: 100%;
+					margin: 0 0 20px;
+					font-size: 1.2rem;
+					color: $gray-3;
+				}
+			}
+		}
+	}
+}
+
+
+
+// ------------------------------
+// RESPONSIViTY
+// ------------------------------
+
+@media only screen and (min-width: $breakpoint-3) {section.posts {
+	
+	.background {
+		height: 200px;
+	}
+
+	ul.posts-list {
+
+		li {
+			margin: 0 0 20px 0;
+
+			> header {
+				margin: 0 0 40px 0;
+
+				.user {
+		
+					figure.user {
+						width: 150px;
+						height: 198px;
+						margin: 0 30px 0 0;
+						border-radius: 10px 10px 0 0;
+					}
+		
+					> .content {
+		
+						.name {
+							margin: 0 0 5px 0;
+							font-size: 2.2rem;
+						}
+
+						.data {
+							font-size: 1.8rem;
+						}
+					}
+				}
+
+				.actions {
+					margin: 0 0 0 40px;
+
+					.icon:last-child {
+						margin: 0 0 0 30px;
+					}
+				}
+			}
+
+			h1 {
+				margin: 0 0 45px 0;
+				font-size: 4rem;
+			}
+
+			> .content {
+				flex-direction: row;
+
+				figure {
+					width: 40%;
+					margin: 0 40px 0 0;
+				}
+
+				p {
+					width: 100%;
+					margin: 0 0 40px;
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+}

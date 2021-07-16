@@ -1,0 +1,145 @@
+.button {
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	outline: none;
+	border: none;
+	transition: all 0.5s;
+
+	span {
+		display: block;
+		width: 100%;
+		padding: 12px 14px 10px;
+		margin: 0;
+		font-family: 'roboto';
+		font-size: 1.6rem;
+	}
+
+	// Tipos.
+
+	&.type-1 {
+		width: auto;
+		height: 40px;
+		border-radius: 10px 10px 0 0;
+		background: linear-gradient(180deg, $red-1 0%, $red-2 100%);
+		
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6px 16px;
+			font-size: 1.4rem;
+			font-weight: bold;
+			font-style: italic;
+			text-align: center;
+			text-transform: uppercase;
+			color: $white;
+			text-shadow: 0px 3px 5px rgba($black, 0.8);
+		}
+
+		&:hover {
+			height: 50px;
+		}
+	}
+
+	&.type-2 {
+		width: auto;
+		height: 40px;
+		border-radius: 10px 10px 0 0;
+		background: $white;
+		
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6px 16px;
+			font-size: 1.4rem;
+			font-weight: bold;
+			font-style: italic;
+			text-align: center;
+			text-transform: uppercase;
+			color: $black;
+		}
+
+		&:hover {
+			background: $gray-1;
+		}
+	}
+
+	&.type-3 {
+		height: fit-content;
+		background-color: transparent;
+
+		span {
+			padding: 0;
+			font-size: 1.8rem;
+			color: $red-1;
+			text-transform: uppercase;
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+}
+
+.buttons {
+	position: fixed;
+	bottom: 40px;
+	width: 100%;
+	padding: 0 20px;
+
+	.container {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.button {
+		margin: 0 20px 0 0;
+	}
+}
+
+
+
+// ------------------------------
+// RESPONSIViTY
+// ------------------------------
+
+@media only screen and (min-width: $breakpoint-3) {
+
+	.buttons {
+		padding: 0 50px;
+		bottom: 60px;
+
+		.container {
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+	
+		.button {
+
+
+			// Tipos.
+		
+			&.type-1 {
+				height: 60px;
+				
+		
+				span {
+					padding: 12px 30px;
+					font-size: 1.8rem;
+				}
+		
+				&:hover {
+					height: 70px;
+				}
+			}
+		}
+	}
+}
+
+

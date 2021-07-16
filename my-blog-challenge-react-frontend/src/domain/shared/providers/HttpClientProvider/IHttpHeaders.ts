@@ -1,0 +1,1 @@
+export type IHttpHeaders = Record<string, string | number | boolean>;
