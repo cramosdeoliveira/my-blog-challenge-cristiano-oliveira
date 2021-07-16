@@ -2,11 +2,11 @@
 
 # Requisitos de sistema
 
-- Node.Js na versão LTS(14.17.3) ou acima.
-- Gerenciador de pacotes npm acima da versão 7.0.0 ou yarn versão 1.22.0 ou acima.
-- IDE ou editor de texto de preferência.
-- Ferramenta de visualização e gerência de banco de dados SQLite(opcional).
-- Conta Github
+- Node.Js na versão LTS(14.17.3) ou acima;
+- Gerenciador de pacotes npm acima da versão 7.0.0 ou yarn versão 1.22.0 ou acima;
+- IDE ou editor de texto de preferência;
+- Ferramenta de visualização e gerência de banco de dados SQLite(opcional);
+- Conta Github.
 
 # Descrição do desafio
 
@@ -112,15 +112,25 @@ O candidato avaliado deverá enfrentar e vencer alguns cenários do cotidiano da
 
 ## Cenários Backend
 
-- Entrega de feature: Para finalizar a entrega da aplicação com os casos de uso descritos, o desenvolvedor responsável deve finalizar os módulos da aplicação responsáveis pela criação de usuário e criação de posts. É de extrema importância atentar as regras de domínio destas funcionalidades.
+- Entrega de feature: Para finalizar a entrega da aplicação com os casos de uso descritos o desenvolvedor responsável deve finalizar os módulos da aplicação responsáveis pela criação de usuário e criação de posts. É de extrema importância atentar as regras de domínio destas funcionalidades.
 
-- Correção de bug: O time de testes e qualidade reportou um problema com a rota de atualização de posts do usuário. Apesar da descrição da rota afirmar ser possível enviar no corpo da requisição somente os atributos que serão atualizados, ao tentar efetuar esta operação, a aplicação retorna um erro 500 desta operação.
+- Correção de bug: O time de testes e qualidade reportou um problema com a funcionalidade de atualização de posts do usuário. Apesar da descrição da rota afirmar ser possível enviar no corpo da requisição somente os atributos que serão atualizados, ao tentar efetuar esta operação, a aplicação retorna um erro 500. Em anexo foi reportada a seguinte evidência:
+
+```
+curl --request PUT \
+  --url http://localhost:3333/posts/1 \
+  --header 'Authorization: Bearer {{token}}' \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"title": "teste de update de titulo"
+}'
+```
 
 - Entrega de feature opcional: Para a primeira entrega do projeto foi acordado que a aplicação não realizaria funcionalidades de upload de arquivo, uma vez que o módulo de armazenamento ainda estava incompleto. Entretanto, caso a aplicação esteja dentro do tempo limite para entrega, uma boa estratégia pode ser adiantar esta demanda.
 
 ## Cenários Frontend
 
-- Entrega de feature: Após realizar a implementação do setor construtivo da aplicação referente a página de postagens, resta ao desenvolvedor a implementação da comunicação com a api para recuperação e listagem dinâmica das postagens cadastrados e respectivos autores.
+- Entrega de feature: Após realizar a construção da interface de postagens, resta ao desenvolvedor a implementação da comunicação com a API para recuperação, listagem dinâmica das postagens cadastradas e respectivos autores.
 
 - Entrega de feature: Após implementar a listagem de postagens, o programador pode prosseguir com o desenvolvimento das funcionalidades de exclusão de postagens e modal para criação e edição, encerrando assim a entrega dos casos de uso solicitados.
 
@@ -133,7 +143,7 @@ yarn
 npm install
 ```
 
-- Para facilitar o candidato, os setores de código incompletos possuem comentários no formato "// TODO";
+- Os setores de código incompletos ou a serem implementados possuem comentários no formato "// TODO";
 
 - Para a execução da aplicação backend deve ser acionado o script contido no arquivo package.json:
 
