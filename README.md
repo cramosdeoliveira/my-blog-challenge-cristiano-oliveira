@@ -6,6 +6,7 @@
 - Gerenciador de pacotes npm acima da versão 7.0.0 ou yarn versão 1.22.0 ou acima.
 - IDE ou editor de texto de preferência.
 - Ferramenta de visualização e gerência de banco de dados SQLite(opcional).
+- Conta Github
 
 # Descrição do desafio
 
